@@ -1,0 +1,37 @@
+# Manual Commands to Add Dataset to Repository
+
+## Step 1: Navigate to repository
+cd "c:\Users\vaddi\OneDrive\Desktop\dbeaver\anon_app_platform_dataset"
+
+## Step 2: Check current status
+git status
+
+## Step 3: Copy CSV files
+copy "c:\Users\vaddi\OneDrive\Desktop\dbeaver\split_files\*.csv" "split_files\"
+
+## Step 4: Modify .gitignore (if needed)
+# Edit .gitignore and comment out or remove this line:
+# split_files/*.csv
+
+## Step 5: Add files
+git add split_files/
+git add .
+
+## Step 6: Commit
+git commit -m "Add complete dataset with CSV files
+
+- Added anon_views_part_01.csv and anon_views_part_02.csv
+- Added anon_user_day_fact.csv  
+- Added anon_company_day_fact.csv
+- Complete dataset now available for deployment"
+
+## Step 7: Push to GitHub
+git push origin main
+
+## Alternative: Using Git LFS (recommended for large files)
+git lfs install
+git lfs track "split_files/*.csv"
+git add .gitattributes
+git add split_files/
+git commit -m "Add dataset with Git LFS"
+git push origin main

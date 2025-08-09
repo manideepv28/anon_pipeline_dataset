@@ -142,8 +142,8 @@ config_local.py
 *.pem
 
 # Large data files (use Git LFS if needed)
-*.csv
-split_files/*.csv
+# *.csv - Commented out to allow CSV files in repository
+# split_files/*.csv - Commented out to allow split files
 *.db
 *.sqlite
 *.sqlite3
