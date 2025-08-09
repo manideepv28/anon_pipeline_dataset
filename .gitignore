@@ -144,6 +144,9 @@ config_local.py
 # Large data files (use Git LFS if needed)
 *.csv
 split_files/*.csv
+*.db
+*.sqlite
+*.sqlite3
 
 # Temporary files
 temp/
